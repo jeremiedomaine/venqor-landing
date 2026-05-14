@@ -3,82 +3,42 @@
 import { DashboardMockup } from "./dashboard-mockup"
 import { CalendarDays } from "lucide-react"
 
-const MIDNIGHT = "oklch(0.22 0.07 260)"
-const MIDNIGHT_DEEP = "oklch(0.16 0.06 262)"
-
 export function Hero() {
   return (
-    <section className="relative min-h-screen overflow-hidden flex flex-col items-center pt-32 pb-24 px-4 bg-paper-texture">
+    <section className="relative flex min-h-screen flex-col items-center overflow-hidden bg-paper-texture px-4 pb-24 pt-32">
       <div
-        className="absolute top-[-80px] left-1/2 -translate-x-1/2 w-[860px] h-[560px] rounded-full pointer-events-none animate-midnight-pulse"
+        className="pointer-events-none absolute left-1/2 top-[-80px] h-[560px] w-[860px] -translate-x-1/2 animate-brand-pulse rounded-full"
         style={{
           background:
-            "radial-gradient(ellipse at center, oklch(0.22 0.07 260 / 0.1) 0%, transparent 70%)",
+            "radial-gradient(ellipse at center, rgb(79 70 229 / 0.12) 0%, transparent 70%)",
         }}
       />
 
-      <div className="absolute inset-0 pointer-events-none bg-paper-grid opacity-[0.6]" />
+      <div className="pointer-events-none absolute inset-0 bg-paper-grid opacity-[0.55]" />
 
-      <div
-        className="relative flex items-center gap-2 rounded-full px-4 py-1.5 mb-8 backdrop-blur-sm"
-        style={{
-          backgroundColor: "oklch(1 0 0 / 0.6)",
-          border: "1px solid oklch(0.22 0.07 260 / 0.12)",
-          boxShadow: "0 2px 8px -2px oklch(0.22 0.07 260 / 0.08)",
-        }}
-      >
+      <div className="relative mb-8 flex items-center gap-2 rounded-full border border-slate-200/90 bg-white/70 px-4 py-1.5 shadow-sm backdrop-blur-sm">
         <span className="relative flex h-2 w-2">
-          <span
-            className="animate-ping absolute inline-flex h-full w-full rounded-full opacity-75"
-            style={{ backgroundColor: MIDNIGHT }}
-          />
-          <span
-            className="relative inline-flex rounded-full h-2 w-2"
-            style={{ backgroundColor: MIDNIGHT }}
-          />
+          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75" />
+          <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
         </span>
-        <span
-          className="text-xs font-medium tracking-wide font-mono"
-          style={{ color: "oklch(0.3 0.05 258)" }}
-        >
+        <span className="text-xs font-medium tracking-wide text-slate-600">
           Accès privé sur invitation
         </span>
       </div>
 
-      <h1
-        className="text-balance text-center font-semibold text-[2.5rem] md:text-5xl lg:text-[3.5rem] tracking-[-0.04em] leading-[1.07] max-w-3xl mb-5 relative"
-        style={{ color: MIDNIGHT_DEEP }}
-      >
+      <h1 className="relative mb-5 max-w-3xl text-balance text-center text-[2.5rem] font-semibold leading-[1.07] tracking-[-0.04em] text-slate-900 md:text-5xl lg:text-[3.5rem]">
         L&apos;infrastructure financière dédiée aux lieux de réception.
       </h1>
 
-      <p
-        className="text-pretty text-center text-[0.9375rem] md:text-base leading-[1.65] max-w-lg mb-10 tracking-[-0.01em]"
-        style={{ color: "oklch(0.45 0.04 258)" }}
-      >
+      <p className="mb-10 max-w-lg text-pretty text-center text-[0.9375rem] leading-[1.65] tracking-[-0.01em] text-slate-600 md:text-base">
         Centralisez vos contrats, sécurisez vos encaissements et automatisez la gestion financière de votre domaine.
       </p>
 
       <a
         href="#booking"
-        className="flex items-center gap-2 text-white font-semibold text-sm px-6 py-3 rounded-xl transition-all duration-200 shadow-lg tracking-tight"
-        style={{
-          backgroundColor: MIDNIGHT,
-          boxShadow:
-            "0 12px 32px -8px oklch(0.22 0.07 260 / 0.4), 0 4px 12px -2px oklch(0.16 0.06 262 / 0.2)",
-        }}
-        onMouseEnter={e => {
-          ;(e.currentTarget as HTMLAnchorElement).style.boxShadow =
-            "0 16px 40px -8px oklch(0.22 0.07 260 / 0.55), 0 6px 16px -2px oklch(0.16 0.06 262 / 0.3)"
-          ;(e.currentTarget as HTMLAnchorElement).style.backgroundColor = MIDNIGHT_DEEP
-        }}
-        onMouseLeave={e => {
-          ;(e.currentTarget as HTMLAnchorElement).style.boxShadow =
-            "0 12px 32px -8px oklch(0.22 0.07 260 / 0.4), 0 4px 12px -2px oklch(0.16 0.06 262 / 0.2)"
-          ;(e.currentTarget as HTMLAnchorElement).style.backgroundColor = MIDNIGHT
-        }}
+        className="relative flex items-center gap-2 rounded-xl bg-primary px-6 py-3 text-sm font-semibold tracking-tight text-primary-foreground shadow-lg shadow-primary/25 transition-all hover:bg-primary/90 hover:shadow-xl hover:shadow-primary/30"
       >
-        <CalendarDays className="w-4 h-4" />
+        <CalendarDays className="h-4 w-4" />
         Planifier une démonstration
       </a>
 

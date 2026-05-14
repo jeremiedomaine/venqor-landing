@@ -5,12 +5,12 @@ import Cal, { getCalApi } from "@calcom/embed-react"
 
 const CAL_NAMESPACE = "venqorLanding"
 const CAL_LINK = "jeremie-thomasse-lbxysk/30min"
-/** Bleu nuit Venqor — aligné avec la nouvelle DA */
-const BRAND_MIDNIGHT = "#1a2e57"
+/** Indigo brand — charte SaaS Premium (MVB) */
+const BRAND_PRIMARY = "#4F46E5"
 
 /**
- * Cal.com en embed React + `cal("ui")` pour thème clair, brandColor bleu nuit
- * et fond transparent (voir [documentation embed React Cal.com](https://developer.cal.com/embed/install-with-react)).
+ * Cal.com en embed React + `cal("ui")` — thème clair, brandColor indigo MVB
+ * (voir https://developer.cal.com/embed/install-with-react).
  */
 export function VenqorCalEmbed({ className }: { className?: string }) {
   const uiApplied = useRef(false)
@@ -27,18 +27,18 @@ export function VenqorCalEmbed({ className }: { className?: string }) {
       cal("ui", {
         theme: "light",
         styles: {
-          branding: { brandColor: BRAND_MIDNIGHT },
+          branding: { brandColor: BRAND_PRIMARY },
           body: { background: "transparent" },
         },
         cssVarsPerTheme: {
           light: {
             "cal-bg": "transparent",
-            "cal-bg-emphasis": "rgba(248, 246, 240, 0.8)",
-            "cal-bg-subtle": "rgba(248, 246, 240, 0.6)",
-            "cal-border-booker": "rgb(26 46 87 / 0.12)",
-            "cal-border-subtle": "rgb(26 46 87 / 0.08)",
-            "cal-text": "#0f1e3d",
-            "cal-text-emphasis": "#0a162e",
+            "cal-bg-emphasis": "rgba(248, 250, 252, 0.95)",
+            "cal-bg-subtle": "rgba(241, 245, 249, 0.85)",
+            "cal-border-booker": "rgb(226 232 240 / 0.95)",
+            "cal-border-subtle": "rgb(226 232 240 / 0.7)",
+            "cal-text": "#0f172a",
+            "cal-text-emphasis": "#0f172a",
           },
           dark: {
             "cal-bg": "transparent",

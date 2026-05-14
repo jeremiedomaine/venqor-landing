@@ -18,9 +18,9 @@ import {
   ResponsiveContainer,
 } from "recharts"
 
-const MIDNIGHT = "oklch(0.22 0.07 260)"
-const MIDNIGHT_DEEP = "oklch(0.16 0.06 262)"
-const MIDNIGHT_SOFT = "oklch(0.45 0.13 258)"
+import { VenqorLogo } from "@/components/venqor/venqor-logo"
+
+const PRIMARY = "#4f46e5"
 
 const revenueData = [
   { month: "Jan", revenue: 12000 },
@@ -43,103 +43,49 @@ const sidebarItems = [
 
 export function DashboardMockup() {
   return (
-    <div className="relative w-full max-w-5xl mx-auto mt-16 px-4">
-      <div
-        className="absolute inset-x-8 bottom-0 top-8 blur-3xl rounded-3xl pointer-events-none"
-        style={{ backgroundColor: "oklch(0.22 0.07 260 / 0.1)" }}
-      />
+    <div className="relative mx-auto mt-16 w-full max-w-5xl px-4">
+      <div className="pointer-events-none absolute inset-x-8 bottom-0 top-8 rounded-3xl bg-primary/10 blur-3xl" />
 
-      <div
-        className="relative rounded-2xl overflow-hidden backdrop-blur-xl"
-        style={{
-          backgroundColor: "oklch(1 0 0 / 0.85)",
-          border: "1px solid oklch(0.22 0.07 260 / 0.1)",
-          boxShadow:
-            "0 30px 80px -30px oklch(0.16 0.06 262 / 0.3), 0 12px 32px -12px oklch(0.16 0.06 262 / 0.15)",
-        }}
-      >
-        <div
-          className="flex items-center gap-2 px-4 py-3"
-          style={{
-            backgroundColor: "oklch(0.97 0.008 250 / 0.7)",
-            borderBottom: "1px solid oklch(0.22 0.07 260 / 0.08)",
-          }}
-        >
-          <span
-            className="w-3 h-3 rounded-full"
-            style={{ backgroundColor: "oklch(0.85 0.02 255)" }}
-          />
-          <span
-            className="w-3 h-3 rounded-full"
-            style={{ backgroundColor: "oklch(0.85 0.02 255)" }}
-          />
-          <span
-            className="w-3 h-3 rounded-full"
-            style={{ backgroundColor: "oklch(0.85 0.02 255)" }}
-          />
-          <div
-            className="flex-1 mx-4 h-6 rounded-md flex items-center px-3"
-            style={{
-              backgroundColor: "oklch(0.95 0.012 252)",
-              border: "1px solid oklch(0.22 0.07 260 / 0.06)",
-            }}
-          >
-            <span
-              className="text-xs font-mono"
-              style={{ color: "oklch(0.5 0.04 258)" }}
-            >
+      <div className="relative overflow-hidden rounded-2xl border border-slate-200/90 bg-white/90 shadow-2xl shadow-slate-900/10 backdrop-blur-xl">
+        <div className="flex items-center gap-2 border-b border-slate-200/80 bg-slate-50/80 px-4 py-3">
+          <span className="h-3 w-3 rounded-full bg-slate-300" />
+          <span className="h-3 w-3 rounded-full bg-slate-300" />
+          <span className="h-3 w-3 rounded-full bg-slate-300" />
+          <div className="mx-4 flex h-6 flex-1 items-center rounded-md border border-slate-200/80 bg-white px-3">
+            <span className="font-mono text-xs text-slate-500">
               app.venqor.io/dashboard
             </span>
           </div>
         </div>
 
         <div className="flex h-[400px] md:h-[480px]">
-          <aside
-            className="hidden md:flex flex-col w-[180px] shrink-0 py-6 px-3 gap-1"
-            style={{
-              backgroundColor: "oklch(0.97 0.008 250 / 0.5)",
-              borderRight: "1px solid oklch(0.22 0.07 260 / 0.08)",
-            }}
-          >
-            <div className="px-3 mb-4">
-              <span
-                className="text-xs font-semibold tracking-widest uppercase font-mono"
-                style={{ color: MIDNIGHT }}
-              >
-                Venqor
-              </span>
+          <aside className="hidden w-[180px] shrink-0 flex-col gap-1 border-r border-slate-200/80 bg-slate-50/60 py-6 md:flex">
+            <div className="mb-4 px-3">
+              <VenqorLogo size="sm" />
             </div>
             {sidebarItems.map(({ icon: Icon, label, active }) => (
               <div
                 key={label}
-                className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm transition-colors"
-                style={
+                className={`flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm transition-colors ${
                   active
-                    ? {
-                        backgroundColor: "oklch(0.22 0.07 260 / 0.08)",
-                        color: MIDNIGHT,
-                        fontWeight: 500,
-                      }
-                    : { color: "oklch(0.5 0.04 258)" }
-                }
+                    ? "bg-primary/10 font-medium text-primary"
+                    : "text-slate-500 hover:text-slate-800"
+                }`}
               >
-                <Icon className="w-4 h-4 shrink-0" />
+                <Icon className="h-4 w-4 shrink-0" />
                 <span>{label}</span>
               </div>
             ))}
             <div className="mt-auto">
-              <div
-                className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm"
-                style={{ color: "oklch(0.6 0.03 258)" }}
-              >
-                <Settings className="w-4 h-4 shrink-0" />
+              <div className="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm text-slate-500">
+                <Settings className="h-4 w-4 shrink-0" />
                 <span>Paramètres</span>
               </div>
             </div>
           </aside>
 
-          <main className="flex-1 p-6 overflow-hidden">
-            <div className="grid grid-cols-3 gap-3 mb-6">
+          <main className="flex-1 overflow-hidden p-6">
+            <div className="mb-6 grid grid-cols-3 gap-3">
               {[
                 { label: "Revenus (Sept.)", value: "52 700 €", delta: "+18%" },
                 { label: "Contrats actifs", value: "24", delta: "+3" },
@@ -147,47 +93,20 @@ export function DashboardMockup() {
               ].map(stat => (
                 <div
                   key={stat.label}
-                  className="rounded-xl p-3"
-                  style={{
-                    backgroundColor: "oklch(1 0 0 / 0.7)",
-                    border: "1px solid oklch(0.22 0.07 260 / 0.08)",
-                    boxShadow: "0 1px 2px oklch(0.16 0.06 262 / 0.04)",
-                  }}
+                  className="rounded-xl border border-slate-200/80 bg-white/80 p-3 shadow-sm"
                 >
-                  <p
-                    className="text-xs mb-1"
-                    style={{ color: "oklch(0.5 0.04 258)" }}
-                  >
-                    {stat.label}
-                  </p>
-                  <p
-                    className="text-sm font-bold"
-                    style={{ color: MIDNIGHT_DEEP }}
-                  >
-                    {stat.value}
-                  </p>
-                  <p
-                    className="text-xs flex items-center gap-1 mt-0.5 font-mono"
-                    style={{ color: MIDNIGHT_SOFT }}
-                  >
-                    <TrendingUp className="w-3 h-3" />
+                  <p className="mb-1 text-xs text-slate-500">{stat.label}</p>
+                  <p className="text-sm font-bold text-slate-900">{stat.value}</p>
+                  <p className="mt-0.5 flex items-center gap-1 font-mono text-xs text-primary">
+                    <TrendingUp className="h-3 w-3" />
                     {stat.delta}
                   </p>
                 </div>
               ))}
             </div>
 
-            <div
-              className="rounded-xl p-4"
-              style={{
-                backgroundColor: "oklch(1 0 0 / 0.6)",
-                border: "1px solid oklch(0.22 0.07 260 / 0.08)",
-              }}
-            >
-              <p
-                className="text-xs font-medium mb-4"
-                style={{ color: "oklch(0.4 0.04 258)" }}
-              >
+            <div className="rounded-xl border border-slate-200/80 bg-white/70 p-4">
+              <p className="mb-4 text-xs font-medium text-slate-600">
                 Revenus encaissés — 2024
               </p>
               <ResponsiveContainer width="100%" height={180}>
@@ -197,37 +116,36 @@ export function DashboardMockup() {
                 >
                   <defs>
                     <linearGradient
-                      id="midnightGradient"
+                      id="indigoBrandGradient"
                       x1="0"
                       y1="0"
                       x2="0"
                       y2="1"
                     >
-                      <stop offset="0%" stopColor={MIDNIGHT} stopOpacity={0.32} />
-                      <stop offset="100%" stopColor={MIDNIGHT} stopOpacity={0} />
+                      <stop offset="0%" stopColor={PRIMARY} stopOpacity={0.32} />
+                      <stop offset="100%" stopColor={PRIMARY} stopOpacity={0} />
                     </linearGradient>
                   </defs>
                   <XAxis
                     dataKey="month"
-                    tick={{ fill: "oklch(0.55 0.04 258)", fontSize: 11 }}
+                    tick={{ fill: "#64748b", fontSize: 11 }}
                     axisLine={false}
                     tickLine={false}
                   />
                   <YAxis
-                    tick={{ fill: "oklch(0.55 0.04 258)", fontSize: 11 }}
+                    tick={{ fill: "#64748b", fontSize: 11 }}
                     axisLine={false}
                     tickLine={false}
                     tickFormatter={v => `${(v / 1000).toFixed(0)}k`}
                   />
                   <Tooltip
                     contentStyle={{
-                      background: "oklch(1 0 0)",
-                      border: "1px solid oklch(0.22 0.07 260 / 0.15)",
+                      background: "#ffffff",
+                      border: "1px solid #e2e8f0",
                       borderRadius: "8px",
                       fontSize: "12px",
-                      color: "oklch(0.18 0.04 255)",
-                      boxShadow:
-                        "0 8px 24px -8px oklch(0.16 0.06 262 / 0.25)",
+                      color: "#0f172a",
+                      boxShadow: "0 8px 24px -8px rgb(15 23 42 / 0.15)",
                     }}
                     formatter={(value: number) => [
                       `${value.toLocaleString("fr-FR")} €`,
@@ -237,11 +155,11 @@ export function DashboardMockup() {
                   <Area
                     type="monotone"
                     dataKey="revenue"
-                    stroke={MIDNIGHT}
+                    stroke={PRIMARY}
                     strokeWidth={2}
-                    fill="url(#midnightGradient)"
+                    fill="url(#indigoBrandGradient)"
                     dot={false}
-                    activeDot={{ r: 4, fill: MIDNIGHT, strokeWidth: 0 }}
+                    activeDot={{ r: 4, fill: PRIMARY, strokeWidth: 0 }}
                   />
                 </AreaChart>
               </ResponsiveContainer>
@@ -250,63 +168,27 @@ export function DashboardMockup() {
         </div>
       </div>
 
-      <div
-        className="absolute -bottom-4 -left-2 md:left-4 flex items-center gap-3 rounded-xl px-4 py-3 w-[260px] md:w-[290px] animate-float-slow backdrop-blur-xl"
-        style={{
-          backgroundColor: "oklch(1 0 0 / 0.92)",
-          border: "1px solid oklch(0.22 0.07 260 / 0.1)",
-          boxShadow:
-            "0 18px 40px -16px oklch(0.16 0.06 262 / 0.3), 0 6px 14px -6px oklch(0.16 0.06 262 / 0.15)",
-        }}
-      >
-        <div
-          className="flex items-center justify-center w-8 h-8 rounded-full shrink-0"
-          style={{ backgroundColor: "oklch(0.22 0.07 260 / 0.1)" }}
-        >
-          <CheckCircle2 className="w-4 h-4" style={{ color: MIDNIGHT }} />
+      <div className="absolute -bottom-4 -left-2 flex w-[260px] animate-float-slow items-center gap-3 rounded-xl border border-slate-200/90 bg-white/95 px-4 py-3 shadow-xl shadow-slate-900/10 backdrop-blur-xl md:left-4 md:w-[290px]">
+        <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary/10">
+          <CheckCircle2 className="h-4 w-4 text-primary" />
         </div>
         <div>
-          <p
-            className="text-xs font-semibold leading-tight"
-            style={{ color: MIDNIGHT_DEEP }}
-          >
+          <p className="text-xs font-semibold leading-tight text-slate-900">
             Relance J-30 envoyée
           </p>
-          <p
-            className="text-xs mt-0.5"
-            style={{ color: "oklch(0.5 0.04 258)" }}
-          >
-            Domaine de la Tour
-          </p>
+          <p className="mt-0.5 text-xs text-slate-500">Domaine de la Tour</p>
         </div>
       </div>
 
-      <div
-        className="absolute -top-4 -right-2 md:right-4 flex items-center gap-3 rounded-xl px-4 py-3 w-[240px] md:w-[260px] animate-float-medium backdrop-blur-xl"
-        style={{
-          backgroundColor: "oklch(1 0 0 / 0.92)",
-          border: "1px solid oklch(0.22 0.07 260 / 0.1)",
-          boxShadow:
-            "0 18px 40px -16px oklch(0.16 0.06 262 / 0.3), 0 6px 14px -6px oklch(0.16 0.06 262 / 0.15)",
-        }}
-      >
-        <div
-          className="flex items-center justify-center w-8 h-8 rounded-full shrink-0"
-          style={{ backgroundColor: "oklch(0.22 0.07 260 / 0.1)" }}
-        >
-          <CreditCard className="w-4 h-4" style={{ color: MIDNIGHT }} />
+      <div className="absolute -right-2 -top-4 flex w-[240px] animate-float-medium items-center gap-3 rounded-xl border border-slate-200/90 bg-white/95 px-4 py-3 shadow-xl shadow-slate-900/10 backdrop-blur-xl md:right-4 md:w-[260px]">
+        <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary/10">
+          <CreditCard className="h-4 w-4 text-primary" />
         </div>
         <div>
-          <p
-            className="text-xs font-semibold leading-tight"
-            style={{ color: MIDNIGHT_DEEP }}
-          >
+          <p className="text-xs font-semibold leading-tight text-slate-900">
             Solde encaissé
           </p>
-          <p
-            className="text-xs font-bold font-mono mt-0.5"
-            style={{ color: MIDNIGHT }}
-          >
+          <p className="mt-0.5 font-mono text-xs font-bold text-primary">
             4 500 €
           </p>
         </div>
