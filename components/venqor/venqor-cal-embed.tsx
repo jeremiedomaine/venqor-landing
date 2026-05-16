@@ -1,30 +1,36 @@
 "use client"
 
-import { useEffect, useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 import Cal, { getCalApi } from "@calcom/embed-react"
 
 const CAL_NAMESPACE = "venqorLanding"
+const MIN_EMBED_HEIGHT = 600
 
 /**
  * Lien d’événement Cal.com (sans https://cal.com/).
  * Ex. : "votre-username/25min" ou "equipe/25min"
- * À mettre à jour dans .env.local et sur Vercel après un changement de compte.
  */
 const CAL_LINK =
   process.env.NEXT_PUBLIC_CAL_LINK ?? "jeremie-venqor/25min"
-/** Indigo brand — charte SaaS Premium (MVB) */
+
 const BRAND_PRIMARY = "#4F46E5"
 
-/**
- * Cal.com en embed React + `cal("ui")` — thème clair, brandColor indigo MVB
- * (voir https://developer.cal.com/embed/install-with-react).
- */
 export function VenqorCalEmbed({ className }: { className?: string }) {
   const uiApplied = useRef(false)
+  const [embedHeight, setEmbedHeight] = useState(MIN_EMBED_HEIGHT)
 
   useEffect(() => {
     const onLinkReady = () => {
       void applyVenqorUi()
+    }
+
+    const onDimensionChanged = (e: CustomEvent<{
+      data: { iframeHeight?: number }
+    }>) => {
+      const next = e.detail?.data?.iframeHeight
+      if (typeof next === "number" && next > 0) {
+        setEmbedHeight(Math.max(MIN_EMBED_HEIGHT, Math.ceil(next)))
+      }
     }
 
     async function applyVenqorUi() {
@@ -60,6 +66,10 @@ export function VenqorCalEmbed({ className }: { className?: string }) {
     void getCalApi({ namespace: CAL_NAMESPACE }).then(cal => {
       if (cancelled) return
       cal("on", { action: "linkReady", callback: onLinkReady })
+      cal("on", {
+        action: "__dimensionChanged",
+        callback: onDimensionChanged,
+      })
     })
 
     const fallback = window.setTimeout(() => {
@@ -72,20 +82,29 @@ export function VenqorCalEmbed({ className }: { className?: string }) {
       uiApplied.current = false
       void getCalApi({ namespace: CAL_NAMESPACE }).then(cal => {
         cal("off", { action: "linkReady", callback: onLinkReady })
+        cal("off", {
+          action: "__dimensionChanged",
+          callback: onDimensionChanged,
+        })
       })
     }
   }, [])
 
   return (
-    <Cal
-      namespace={CAL_NAMESPACE}
-      calLink={CAL_LINK}
-      config={{
-        theme: "light",
-        "ui.color-scheme": "light",
-        overlayCalendar: "true",
-      }}
+    <div
       className={className}
-    />
+      style={{ minHeight: embedHeight }}
+    >
+      <Cal
+        namespace={CAL_NAMESPACE}
+        calLink={CAL_LINK}
+        config={{
+          theme: "light",
+          "ui.color-scheme": "light",
+          overlayCalendar: "true",
+        }}
+        className="h-full w-full min-h-[inherit]"
+      />
+    </div>
   )
 }

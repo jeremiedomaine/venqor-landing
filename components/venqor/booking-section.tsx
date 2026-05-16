@@ -9,7 +9,7 @@ export function BookingSection() {
   return (
     <section
       id="booking"
-      className="relative overflow-hidden bg-paper-texture px-4 py-28"
+      className="relative bg-paper-texture px-4 py-28"
     >
       <div className="absolute left-1/2 top-0 h-px w-[600px] -translate-x-1/2 bg-gradient-to-r from-transparent via-primary/25 to-transparent" />
 
@@ -28,7 +28,7 @@ export function BookingSection() {
           </p>
         </div>
 
-        <div className="overflow-hidden rounded-2xl border border-slate-200/90 bg-white/75 shadow-2xl shadow-slate-900/10 backdrop-blur-sm">
+        <div className="rounded-2xl border border-slate-200/90 bg-white/75 shadow-2xl shadow-slate-900/10 backdrop-blur-sm">
           <div className="flex flex-col md:flex-row">
             <div className="flex shrink-0 flex-col gap-5 border-b border-slate-200/80 bg-slate-50/70 p-7 md:w-72 md:border-b-0 md:border-r">
               <div>
@@ -66,8 +66,8 @@ export function BookingSection() {
             </div>
 
             <div className="min-w-0 flex-1 bg-slate-50/50 p-3 sm:p-4 md:p-5">
-              <div className="relative h-[min(78vh,820px)] min-h-[600px] w-full overflow-hidden rounded-2xl border border-slate-200/90 bg-white/90 shadow-lg shadow-slate-900/5">
-                <VenqorCalEmbed className="h-full min-h-[inherit] w-full" />
+              <div className="relative w-full min-h-[600px] max-h-[min(90vh,960px)] overflow-y-auto overflow-x-hidden rounded-2xl border border-slate-200/90 bg-white/90 shadow-lg shadow-slate-900/5 overscroll-contain [-webkit-overflow-scrolling:touch]">
+                <VenqorCalEmbed className="w-full" />
               </div>
             </div>
           </div>
