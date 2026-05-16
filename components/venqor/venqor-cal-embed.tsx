@@ -4,7 +4,14 @@ import { useEffect, useRef } from "react"
 import Cal, { getCalApi } from "@calcom/embed-react"
 
 const CAL_NAMESPACE = "venqorLanding"
-const CAL_LINK = "jeremie-thomasse-lbxysk/30min"
+
+/**
+ * Lien d’événement Cal.com (sans https://cal.com/).
+ * Ex. : "votre-username/25min" ou "equipe/25min"
+ * À mettre à jour dans .env.local et sur Vercel après un changement de compte.
+ */
+const CAL_LINK =
+  process.env.NEXT_PUBLIC_CAL_LINK ?? "jeremie-venqor/25min"
 /** Indigo brand — charte SaaS Premium (MVB) */
 const BRAND_PRIMARY = "#4F46E5"
 
