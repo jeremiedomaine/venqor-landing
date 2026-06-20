@@ -1,6 +1,6 @@
 import { VenqorLogo } from "@/components/venqor/venqor-logo"
 
-const LOGIN_URL = "https://acceuil.venqor.app/login"
+const LOGIN_URL = "https://app.venqor.app/login"
 
 export function TopBar() {
   return (
