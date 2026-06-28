@@ -21,7 +21,7 @@ export function BookingSection() {
             Démonstration privée
           </p>
           <h2 className="mx-auto mb-4 max-w-xl text-balance text-3xl font-semibold leading-[1.1] tracking-[-0.04em] text-slate-900 md:text-4xl">
-            Voyez Venqor en action en 30 minutes.
+            Voyez Venqor en action en 25 minutes.
           </h2>
           <p className="mx-auto max-w-md text-[0.9375rem] leading-relaxed tracking-[-0.01em] text-slate-600">
             Un échange sans engagement avec notre équipe pour découvrir comment Venqor s&apos;adapte à votre domaine.
@@ -46,7 +46,7 @@ export function BookingSection() {
               <div className="flex flex-col gap-3 text-sm text-slate-600">
                 <div className="flex items-center gap-2.5">
                   <Clock className="h-4 w-4 shrink-0 text-slate-400" />
-                  <span>30 minutes</span>
+                  <span>25 minutes</span>
                 </div>
                 <div className="flex items-center gap-2.5">
                   <Video className="h-4 w-4 shrink-0 text-slate-400" />

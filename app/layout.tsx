@@ -10,9 +10,9 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "Venqor — Infrastructure financière pour lieux de réception",
+  title: "Venqor — Cockpit pour lieux de réception",
   description:
-    "Centralisez vos contrats, sécurisez vos encaissements et automatisez la gestion financière de votre domaine avec Venqor.",
+    "Pilotez vos dossiers, sécurisez vos dates et encaissez plus sereinement. Pipeline, contrats Signable, page client et pilotage saisonnier pour châteaux et domaines.",
   generator: "v0.app",
   icons: {
     icon: [
