@@ -6,8 +6,8 @@ export function SiteFooter() {
       <div className="mx-auto flex max-w-5xl flex-col gap-8 md:flex-row md:items-start md:justify-between">
         <div>
           <VenqorLogo size="md" />
-          <p className="mt-3 max-w-xs text-sm leading-relaxed text-slate-600">
-            Le cockpit de votre domaine — demandes, contrats, acomptes et relances au même endroit.
+          <p className="mt-3 max-w-xs text-sm text-slate-600">
+            Infrastructure financière pour lieux de réception.
           </p>
         </div>
         <div className="grid grid-cols-2 gap-8 text-sm sm:grid-cols-3">

@@ -1,18 +1,9 @@
 import { Building2, Link2, ShieldCheck } from "lucide-react"
 
 const proofs = [
-  {
-    icon: Building2,
-    text: "Conçu pour châteaux, domaines et lieux de réception",
-  },
-  {
-    icon: Link2,
-    text: "Vos clients n’ont pas besoin de créer un compte",
-  },
-  {
-    icon: ShieldCheck,
-    text: "Vous gardez la main sur la confirmation des virements",
-  },
+  { icon: Building2, text: "Châteaux, domaines & lieux de réception" },
+  { icon: Link2, text: "Page client sans compte" },
+  { icon: ShieldCheck, text: "Vous confirmez les virements" },
 ]
 
 export function ReassuranceStrip() {

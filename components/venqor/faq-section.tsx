@@ -9,41 +9,17 @@ import {
 import { SectionShell } from "@/components/venqor/section-shell"
 
 const faqs = [
-  {
-    q: "Venqor remplace ma compta ?",
-    a: "Non. Venqor suit vos dossiers et encaissements ; vos factures légales restent dans votre logiciel comptable habituel.",
-  },
-  {
-    q: "Mes clients doivent-ils s’inscrire ?",
-    a: "Non. Ils reçoivent un lien privé vers leur page client : échéancier, coordonnées bancaires et déclaration de virement — sans création de compte.",
-  },
-  {
-    q: "Uniquement les mariages ?",
-    a: "Non. Mariage par défaut, plus « Autre événement » et types personnalisés (séminaire, anniversaire, privatisations…).",
-  },
-  {
-    q: "Comment les paiements sont-ils confirmés ?",
-    a: "Le client déclare son virement depuis sa page ; vous confirmez ou rejetez depuis Venqor après vérification sur votre compte bancaire.",
-  },
-  {
-    q: "Puis-je personnaliser les emails et relances ?",
-    a: "Oui — objets, introductions et déclencheurs (avant/après échéance, relance contrat, alertes domaine) sont configurables par type et statut d’événement.",
-  },
-  {
-    q: "Paiement par carte bancaire ?",
-    a: "Aujourd’hui, le flux principal est le virement IBAN affiché sur la page client. Simple, traçable, adapté au marché français des lieux de réception.",
-  },
+  { q: "Venqor remplace ma compta ?", a: "Non. Suivi dossiers et encaissements uniquement." },
+  { q: "Mes clients s’inscrivent ?", a: "Non. Un lien privé vers leur page, sans compte." },
+  { q: "Uniquement les mariages ?", a: "Non. Mariage + autres types (séminaire, anniversaire…)." },
+  { q: "Comment confirmer un paiement ?", a: "Le client déclare le virement, vous validez en un clic." },
+  { q: "Relances personnalisables ?", a: "Oui — emails, objets et déclencheurs configurables." },
+  { q: "Paiement par carte ?", a: "Aujourd’hui : virement IBAN sur la page client." },
 ]
 
 export function FAQSection() {
   return (
-    <SectionShell
-      id="faq"
-      eyebrow="FAQ"
-      title="Questions fréquentes"
-      description="Les réponses aux questions que se posent les gérants de domaines avant de rejoindre Venqor."
-      className="bg-paper-texture"
-    >
+    <SectionShell id="faq" eyebrow="FAQ" title="Questions fréquentes" className="bg-paper-texture">
       <Accordion
         type="single"
         collapsible
@@ -51,10 +27,10 @@ export function FAQSection() {
       >
         {faqs.map((faq, i) => (
           <AccordionItem key={faq.q} value={`item-${i}`}>
-            <AccordionTrigger className="text-left text-base font-medium text-slate-900 hover:no-underline">
+            <AccordionTrigger className="text-left text-sm font-medium text-slate-900 hover:no-underline">
               {faq.q}
             </AccordionTrigger>
-            <AccordionContent className="text-sm leading-relaxed text-slate-600">
+            <AccordionContent className="text-sm text-slate-600">
               {faq.a}
             </AccordionContent>
           </AccordionItem>

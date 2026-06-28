@@ -23,8 +23,8 @@ export function BookingSection() {
           <h2 className="mx-auto mb-4 max-w-xl text-balance text-3xl font-semibold leading-[1.1] tracking-[-0.04em] text-slate-900 md:text-4xl">
             Voyez Venqor en action en 25 minutes.
           </h2>
-          <p className="mx-auto max-w-md text-[0.9375rem] leading-relaxed tracking-[-0.01em] text-slate-600">
-            Un échange sans engagement avec notre équipe pour découvrir comment Venqor s&apos;adapte à votre domaine.
+          <p className="mx-auto max-w-md text-sm text-slate-600">
+            25 minutes pour découvrir Venqor sur votre cas d&apos;usage.
           </p>
         </div>
 
@@ -60,7 +60,7 @@ export function BookingSection() {
 
               <div className="mt-auto border-t border-slate-200/80 pt-4">
                 <p className="text-xs leading-relaxed text-slate-500">
-                  Notre équipe vous montrera comment automatiser vos encaissements, gérer vos contrats et piloter votre trésorerie en temps réel.
+                  Automatisation des encaissements, contrats et trésorerie en temps réel.
                 </p>
               </div>
             </div>

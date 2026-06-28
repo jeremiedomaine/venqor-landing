@@ -13,50 +13,32 @@ const features = [
   {
     icon: Columns3,
     title: "Pipeline",
-    subtitle: "Cœur opérationnel",
-    description:
-      "Kanban et calendrier des dossiers actifs. Demande → Date bloquée → Confirmé → Clôturé. Vue des virements à confirmer.",
-    benefit: "Une seule source de vérité — fini le « où en est ce dossier ? »",
+    description: "Kanban, calendrier, virements à confirmer. Demande → Clôturé.",
   },
   {
     icon: FileText,
-    title: "Contrat électronique",
-    subtitle: "Signable intégré",
-    description:
-      "Envoi depuis un dossier en date bloquée. Signatures en ligne, modèle PDF/DOCX personnalisable (noms, dates, montants…).",
-    benefit: "Moins d’allers-retours, dossier engagé plus vite.",
+    title: "Contrat",
+    description: "Envoi Signable, signatures en ligne, modèle personnalisable.",
   },
   {
     icon: Wallet,
-    title: "Facturation & échéancier",
-    subtitle: "Règles métier",
-    description:
-      "Acompte % + solde %, libellés et échéances (ex. solde à J-30). Génération auto au blocage de date.",
-    benefit: "Fini les échéanciers recopiés à la main.",
+    title: "Échéancier",
+    description: "Acompte + solde auto selon vos règles (ex. solde à J-30).",
   },
   {
     icon: Globe,
     title: "Page client",
-    subtitle: "Portail sans compte",
-    description:
-      "Lien unique par dossier : échéancier, RIB, déclaration de virement, infos pratiques. « Espace mariés » ou « Espace client ».",
-    benefit: "Clients autonomes — moins de mails « voici notre RIB ».",
+    description: "Lien privé : RIB, échéancier, déclaration de virement. Sans compte.",
   },
   {
     icon: Bell,
-    title: "Automatisations",
-    subtitle: "Relances configurables",
-    description:
-      "Emails acompte et solde (J-30), relances contrat, alertes domaine — filtres par type et statut d’événement.",
-    benefit: "La relance ne repose plus sur la mémoire de l’équipe.",
+    title: "Relances",
+    description: "Emails acompte, solde et contrat — déclencheurs configurables.",
   },
   {
     icon: BarChart3,
     title: "Pilotage",
-    subtitle: "Vue direction",
-    description:
-      "Objectifs annuels, CA confirmé/clôturé, calendrier mensuel avec CA, projection pluriannuelle et pipeline du jour.",
-    benefit: "Anticiper la saison, pas seulement éteindre les feux.",
+    description: "CA, objectifs, calendrier mensuel et pipeline du jour.",
   },
 ]
 
@@ -65,33 +47,23 @@ export function FeaturesSection() {
     <SectionShell
       id="fonctionnalites"
       eyebrow="Fonctionnalités"
-      title="Tout ce qu’il faut pour piloter votre domaine."
-      description="Six modules pensés pour les lieux de réception — du premier contact à l’encaissement."
+      title="Six modules, un seul flux."
       className="bg-white/60"
     >
-      <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-        {features.map(({ icon: Icon, title, subtitle, description, benefit }) => (
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {features.map(({ icon: Icon, title, description }) => (
           <article
             key={title}
-            className="flex flex-col rounded-2xl border border-slate-200/90 bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
+            className="rounded-2xl border border-slate-200/90 bg-white p-5 shadow-sm"
           >
-            <div className="mb-4 flex items-center gap-3">
-              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-slate-200 bg-primary/5">
-                <Icon className="h-5 w-5 text-primary" />
+            <div className="mb-3 flex items-center gap-3">
+              <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-slate-200 bg-primary/5">
+                <Icon className="h-4 w-4 text-primary" />
               </div>
-              <div>
-                <h3 className="font-semibold tracking-tight text-slate-900">
-                  {title}
-                </h3>
-                <p className="text-xs font-medium text-primary">{subtitle}</p>
-              </div>
+              <h3 className="font-semibold text-slate-900">{title}</h3>
             </div>
-            <p className="mb-4 flex-1 text-sm leading-relaxed text-slate-600">
+            <p className="text-sm leading-relaxed text-slate-600">
               {description}
-            </p>
-            <p className="border-t border-slate-100 pt-4 text-xs leading-relaxed text-slate-500">
-              <span className="font-medium text-slate-700">Bénéfice : </span>
-              {benefit}
             </p>
           </article>
         ))}
