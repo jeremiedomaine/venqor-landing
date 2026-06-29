@@ -9,11 +9,52 @@ const inter = Inter({
   display: "swap",
 })
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.venqor.app"
+
 export const metadata: Metadata = {
-  title: "Venqor — Infrastructure financière pour lieux de réception",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "Venqor — Infrastructure financière pour lieux de réception",
+    template: "%s | Venqor",
+  },
   description:
-    "Centralisez vos contrats, sécurisez vos encaissements et automatisez la gestion financière de votre domaine.",
-  generator: "v0.app",
+    "Venqor centralise contrats, acomptes et relances pour châteaux, domaines et lieux de réception. Pipeline, page client et pilotage saisonnier.",
+  keywords: [
+    "Venqor",
+    "lieux de réception",
+    "château mariage",
+    "domaine événementiel",
+    "gestion acomptes",
+    "contrat signature",
+    "SaaS réception",
+  ],
+  authors: [{ name: "Venqor" }],
+  creator: "Venqor",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true },
+  },
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    locale: "fr_FR",
+    url: siteUrl,
+    siteName: "Venqor",
+    title: "Venqor — Infrastructure financière pour lieux de réception",
+    description:
+      "Centralisez vos contrats, sécurisez vos encaissements et automatisez la gestion financière de votre domaine.",
+    images: [{ url: "/icon-192.png", width: 192, height: 192, alt: "Venqor" }],
+  },
+  twitter: {
+    card: "summary",
+    title: "Venqor — Lieux de réception",
+    description:
+      "Pipeline, contrats, acomptes et page client pour châteaux et domaines.",
+    images: ["/icon-192.png"],
+  },
   icons: {
     icon: [
       { url: "/icon-32.png", sizes: "32x32", type: "image/png" },
