@@ -1,6 +1,13 @@
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
+import { StructuredData } from "@/components/venqor/structured-data"
+import {
+  SITE_DESCRIPTION,
+  SITE_NAME,
+  SITE_TAGLINE,
+  SITE_URL,
+} from "@/lib/site"
 import "./globals.css"
 
 const inter = Inter({
@@ -9,16 +16,13 @@ const inter = Inter({
   display: "swap",
 })
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.venqor.app"
-
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
+  metadataBase: new URL(SITE_URL),
   title: {
-    default: "Venqor — Infrastructure financière pour lieux de réception",
-    template: "%s | Venqor",
+    default: `${SITE_NAME} — Infrastructure financière pour lieux de réception`,
+    template: `%s | ${SITE_NAME}`,
   },
-  description:
-    "Venqor centralise contrats, acomptes et relances pour châteaux, domaines et lieux de réception. Pipeline, page client et pilotage saisonnier.",
+  description: SITE_DESCRIPTION,
   keywords: [
     "Venqor",
     "lieux de réception",
@@ -28,8 +32,8 @@ export const metadata: Metadata = {
     "contrat signature",
     "SaaS réception",
   ],
-  authors: [{ name: "Venqor" }],
-  creator: "Venqor",
+  authors: [{ name: SITE_NAME }],
+  creator: SITE_NAME,
   robots: {
     index: true,
     follow: true,
@@ -41,19 +45,15 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "fr_FR",
-    url: siteUrl,
-    siteName: "Venqor",
-    title: "Venqor — Infrastructure financière pour lieux de réception",
-    description:
-      "Centralisez vos contrats, sécurisez vos encaissements et automatisez la gestion financière de votre domaine.",
-    images: [{ url: "/icon-192.png", width: 192, height: 192, alt: "Venqor" }],
+    url: SITE_URL,
+    siteName: SITE_NAME,
+    title: `${SITE_NAME} — Infrastructure financière pour lieux de réception`,
+    description: SITE_TAGLINE,
   },
   twitter: {
-    card: "summary",
-    title: "Venqor — Lieux de réception",
-    description:
-      "Pipeline, contrats, acomptes et page client pour châteaux et domaines.",
-    images: ["/icon-192.png"],
+    card: "summary_large_image",
+    title: `${SITE_NAME} — Lieux de réception`,
+    description: SITE_DESCRIPTION,
   },
   icons: {
     icon: [
@@ -73,6 +73,7 @@ export default function RootLayout({
   return (
     <html lang="fr" className={inter.variable}>
       <body className="font-sans antialiased">
+        <StructuredData />
         {children}
         {process.env.NODE_ENV === "production" && <Analytics />}
       </body>
