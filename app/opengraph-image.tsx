@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og"
 import { SITE_NAME, SITE_TAGLINE } from "@/lib/site"
 
-export const alt = `${SITE_NAME} — Infrastructure financière pour lieux de réception`
+export const alt = `${SITE_NAME} — Réservation pour domaines de réception`
 export const size = { width: 1200, height: 630 }
 export const contentType = "image/png"
 
@@ -51,7 +51,7 @@ export default function OpenGraphImage() {
             color: "#64748B",
           }}
         >
-          Contrats · Acomptes · Page client · Relances
+          Offres · Demandes · Réservation
         </div>
       </div>
     ),

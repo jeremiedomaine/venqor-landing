@@ -7,7 +7,7 @@ export function SiteFooter() {
         <div>
           <VenqorLogo size="md" />
           <p className="mt-3 max-w-xs text-sm text-slate-600">
-            Infrastructure financière pour lieux de réception.
+            Simplifiez la réservation de votre domaine de réception.
           </p>
         </div>
         <div className="grid grid-cols-2 gap-8 text-sm sm:grid-cols-3">
@@ -36,7 +36,7 @@ export function SiteFooter() {
             <ul className="space-y-2 text-slate-600">
               <li>
                 <a href="#booking" className="hover:text-primary">
-                  Démo
+                  Planifier un échange
                 </a>
               </li>
               <li>

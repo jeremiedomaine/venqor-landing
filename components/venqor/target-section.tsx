@@ -1,27 +1,22 @@
-import { Building2, Heart, PartyPopper, Users } from "lucide-react"
+import { Building2, Hotel, UtensilsCrossed } from "lucide-react"
 
 import { SectionShell } from "@/components/venqor/section-shell"
 
 const personas = [
   {
     icon: Building2,
-    title: "Châteaux & domaines",
-    description: "Saisonnalité forte, équipe réduite sur le back-office.",
+    title: "Domaines et châteaux de réception",
+    description: "Établissements qui orchestrent des événements sur-mesure.",
   },
   {
-    icon: Heart,
-    title: "Mariages",
-    description: "Espace mariés, échéancier et contrat dédiés.",
+    icon: Hotel,
+    title: "Lieux événementiels avec hébergement",
+    description: "Capacité d'accueil et de couchages sur un même site.",
   },
   {
-    icon: PartyPopper,
-    title: "Autres événements",
-    description: "Séminaires, anniversaires, privatisations…",
-  },
-  {
-    icon: Users,
-    title: "Utilisateurs",
-    description: "Gérant·e, directeur·rice ou responsable commercial.",
+    icon: UtensilsCrossed,
+    title: "Complexes avec traiteur ou partenaires",
+    description: "Services intégrés ou offres construites avec des partenaires.",
   },
 ]
 
@@ -30,14 +25,14 @@ export function TargetSection() {
     <SectionShell
       id="pour-qui"
       eyebrow="Pour qui"
-      title="Les lieux de réception."
-      className="bg-paper-texture"
+      title="Adapté aux établissements multi-services."
+      className="bg-white/60"
     >
-      <div className="grid gap-4 sm:grid-cols-2">
+      <div className="grid gap-4 md:grid-cols-3">
         {personas.map(({ icon: Icon, title, description }) => (
           <div
             key={title}
-            className="rounded-2xl border border-slate-200/90 bg-white/90 p-5 shadow-sm"
+            className="rounded-2xl border border-slate-200/90 bg-white p-5 shadow-sm"
           >
             <div className="mb-3 flex h-9 w-9 items-center justify-center rounded-xl border border-slate-200 bg-primary/5">
               <Icon className="h-4 w-4 text-primary" />
@@ -47,9 +42,6 @@ export function TargetSection() {
           </div>
         ))}
       </div>
-      <p className="mt-6 text-center text-xs text-slate-500">
-        Pas un CRM générique · Pas un logiciel de compta
-      </p>
     </SectionShell>
   )
 }

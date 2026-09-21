@@ -1,44 +1,28 @@
-import {
-  BarChart3,
-  Bell,
-  Columns3,
-  FileText,
-  Globe,
-  Wallet,
-} from "lucide-react"
+import { LayoutGrid, Route, Store } from "lucide-react"
 
 import { SectionShell } from "@/components/venqor/section-shell"
 
 const features = [
   {
-    icon: Columns3,
-    title: "Pipeline",
-    description: "Kanban, calendrier, virements à confirmer. Demande → Clôturé.",
+    icon: LayoutGrid,
+    title: "Regroupement de vos prestations",
+    subtitle: "Offres modulables",
+    description:
+      "Présentez l'ensemble de vos services (location de salle, formules traiteur, nuitées) sur une interface claire. Vos prospects comprennent immédiatement ce que vous proposez.",
   },
   {
-    icon: FileText,
-    title: "Contrat",
-    description: "Envoi Signable, signatures en ligne, modèle personnalisable.",
+    icon: Store,
+    title: "Structuration des demandes entrantes",
+    subtitle: undefined,
+    description:
+      "Vos clients construisent leur projet pas-à-pas depuis votre vitrine. Vous recevez directement une demande détaillée et chiffrée, avec les vrais besoins du prospect.",
   },
   {
-    icon: Wallet,
-    title: "Échéancier",
-    description: "Acompte + solde auto selon vos règles (ex. solde à J-30).",
-  },
-  {
-    icon: Globe,
-    title: "Page client",
-    description: "Lien privé : RIB, échéancier, déclaration de virement. Sans compte.",
-  },
-  {
-    icon: Bell,
-    title: "Relances",
-    description: "Emails acompte, solde et contrat — déclencheurs configurables.",
-  },
-  {
-    icon: BarChart3,
-    title: "Pilotage",
-    description: "CA, objectifs, calendrier mensuel et pipeline du jour.",
+    icon: Route,
+    title: "Parcours client professionnel",
+    subtitle: undefined,
+    description:
+      "Offrez à vos futurs clients une expérience de réservation en ligne fluide et moderne, à la hauteur de la qualité de votre établissement.",
   },
 ]
 
@@ -47,22 +31,30 @@ export function FeaturesSection() {
     <SectionShell
       id="fonctionnalites"
       eyebrow="Fonctionnalités"
-      title="Six modules, un seul flux."
-      className="bg-white/60"
+      title="Ce que Venqor apporte concrètement."
+      className="bg-paper-texture"
     >
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {features.map(({ icon: Icon, title, description }) => (
+      <div className="grid gap-5 md:grid-cols-3">
+        {features.map(({ icon: Icon, title, subtitle, description }, index) => (
           <article
             key={title}
-            className="rounded-2xl border border-slate-200/90 bg-white p-5 shadow-sm"
+            className="rounded-2xl border border-slate-200/90 bg-white p-6 shadow-sm"
           >
-            <div className="mb-3 flex items-center gap-3">
-              <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-slate-200 bg-primary/5">
-                <Icon className="h-4 w-4 text-primary" />
+            <div className="mb-4 flex items-center gap-3">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-slate-200 bg-primary/5">
+                <Icon className="h-5 w-5 text-primary" />
               </div>
-              <h3 className="font-semibold text-slate-900">{title}</h3>
+              <span className="font-mono text-[10px] text-slate-400">
+                {String(index + 1).padStart(2, "0")}
+              </span>
             </div>
-            <p className="text-sm leading-relaxed text-slate-600">
+            <h3 className="font-semibold tracking-tight text-slate-900">
+              {title}
+            </h3>
+            {subtitle && (
+              <p className="mt-1 text-xs font-medium text-primary">{subtitle}</p>
+            )}
+            <p className="mt-3 text-sm leading-relaxed text-slate-600">
               {description}
             </p>
           </article>

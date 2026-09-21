@@ -7,10 +7,7 @@ import { VenqorLogo } from "@/components/venqor/venqor-logo"
 
 export function BookingSection() {
   return (
-    <section
-      id="booking"
-      className="relative bg-paper-texture px-4 py-28"
-    >
+    <section id="booking" className="relative bg-paper-texture px-4 py-28">
       <div className="absolute left-1/2 top-0 h-px w-[600px] -translate-x-1/2 bg-gradient-to-r from-transparent via-primary/25 to-transparent" />
 
       <div className="pointer-events-none absolute bottom-0 left-1/2 h-[400px] w-[700px] -translate-x-1/2 rounded-full bg-primary/5 blur-[140px]" />
@@ -18,13 +15,14 @@ export function BookingSection() {
       <div className="relative mx-auto max-w-5xl">
         <div className="mb-14 text-center">
           <p className="mb-4 font-mono text-xs font-semibold uppercase tracking-[0.12em] text-primary">
-            Démonstration privée
+            Échange
           </p>
           <h2 className="mx-auto mb-4 max-w-xl text-balance text-3xl font-semibold leading-[1.1] tracking-[-0.04em] text-slate-900 md:text-4xl">
-            Voyez Venqor en action en 25 minutes.
+            Planifier un échange
           </h2>
-          <p className="mx-auto max-w-md text-sm text-slate-600">
-            25 minutes pour découvrir Venqor sur votre cas d&apos;usage.
+          <p className="mx-auto max-w-md text-sm leading-relaxed text-slate-600">
+            15 minutes pour parler de votre lieu et voir si Venqor correspond à
+            vos besoins.
           </p>
         </div>
 
@@ -39,14 +37,14 @@ export function BookingSection() {
                   <VenqorLogo size="sm" />
                 </div>
                 <h3 className="text-base font-semibold tracking-[-0.02em] text-slate-900">
-                  Démonstration produit
+                  Échange découverte
                 </h3>
               </div>
 
               <div className="flex flex-col gap-3 text-sm text-slate-600">
                 <div className="flex items-center gap-2.5">
                   <Clock className="h-4 w-4 shrink-0 text-slate-400" />
-                  <span>25 minutes</span>
+                  <span>15 minutes</span>
                 </div>
                 <div className="flex items-center gap-2.5">
                   <Video className="h-4 w-4 shrink-0 text-slate-400" />
@@ -60,22 +58,19 @@ export function BookingSection() {
 
               <div className="mt-auto border-t border-slate-200/80 pt-4">
                 <p className="text-xs leading-relaxed text-slate-500">
-                  Automatisation des encaissements, contrats et trésorerie en temps réel.
+                  Un échange simple sur le fonctionnement de votre établissement
+                  — sans engagement.
                 </p>
               </div>
             </div>
 
             <div className="min-w-0 flex-1 bg-slate-50/50 p-3 sm:p-4 md:p-5">
-              <div className="relative w-full min-h-[600px] max-h-[min(90vh,960px)] overflow-y-auto overflow-x-hidden rounded-2xl border border-slate-200/90 bg-white/90 shadow-lg shadow-slate-900/5 overscroll-contain [-webkit-overflow-scrolling:touch]">
+              <div className="relative max-h-[min(90vh,960px)] min-h-[600px] w-full overflow-x-hidden overflow-y-auto overscroll-contain rounded-2xl border border-slate-200/90 bg-white/90 shadow-lg shadow-slate-900/5 [-webkit-overflow-scrolling:touch]">
                 <VenqorCalEmbed className="w-full" />
               </div>
             </div>
           </div>
         </div>
-
-        <p className="mt-6 text-center text-xs tracking-[-0.01em] text-slate-500">
-          Sans engagement · Aucune carte bancaire requise · Réponse sous 24h
-        </p>
       </div>
     </section>
   )

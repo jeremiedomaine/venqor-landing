@@ -1,31 +1,34 @@
-import { CalendarX, CreditCard, LineChart } from "lucide-react"
+import { FileSpreadsheet, Inbox, Layers } from "lucide-react"
 
 import { SectionShell } from "@/components/venqor/section-shell"
 
 const pains = [
   {
-    icon: CalendarX,
-    title: "Dates mal sécurisées",
-    description: "Demandes éparpillées — difficile de savoir quelles dates sont engagées.",
+    icon: Layers,
+    title: "Les devis à variables multiples",
+    description:
+      "Gérer sur un même document la location des espaces, le nombre de couchages et les options de restauration prend du temps.",
   },
   {
-    icon: CreditCard,
-    title: "Paiements opaques",
-    description: "Acomptes suivis à la main. « Est-ce qu’ils ont payé ? » en permanence.",
+    icon: Inbox,
+    title: "Les demandes incomplètes",
+    description:
+      "Les premiers contacts par e-mail manquent souvent d'informations clés (dates flexibles, nombre exact de personnes, options souhaitées).",
   },
   {
-    icon: LineChart,
-    title: "Saison invisible",
-    description: "Peu de visibilité sur le remplissage et le CA à venir.",
+    icon: FileSpreadsheet,
+    title: "La dispersion de l'information",
+    description:
+      "Croiser les agendas, les notes de rendez-vous et les différents tableaux de suivi complexifie l'organisation.",
   },
 ]
 
 export function ProblemSection() {
   return (
     <SectionShell
-      id="probleme"
-      eyebrow="Le constat"
-      title="Excel, mails et PDF ne suffisent plus."
+      id="contexte"
+      eyebrow="Pourquoi Venqor"
+      title="Conçu pour les réalités de l'événementiel sur-mesure."
       className="bg-white/60"
     >
       <div className="grid gap-5 md:grid-cols-3">

@@ -50,7 +50,7 @@ export function StructuredData() {
       "@type": "Offer",
       price: "0",
       priceCurrency: "EUR",
-      description: "Démo gratuite sur demande",
+      description: "Échange de découverte sur demande",
     },
   }
 

@@ -6,7 +6,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: SITE_NAME,
     short_name: SITE_NAME,
     description:
-      "Infrastructure financière pour châteaux, domaines et lieux de réception.",
+      "Outil de réservation pour domaines, châteaux et lieux événementiels multi-services.",
     start_url: "/",
     display: "standalone",
     background_color: "#F8FAFC",

@@ -1,8 +1,22 @@
 export const faqs = [
-  { q: "Venqor remplace ma compta ?", a: "Non. Suivi dossiers et encaissements uniquement." },
-  { q: "Mes clients s'inscrivent ?", a: "Non. Un lien privé vers leur page, sans compte." },
-  { q: "Uniquement les mariages ?", a: "Non. Mariage + autres types (séminaire, anniversaire…)." },
-  { q: "Comment confirmer un paiement ?", a: "Le client déclare le virement, vous validez en un clic." },
-  { q: "Relances personnalisables ?", a: "Oui — emails, objets et déclencheurs configurables." },
-  { q: "Paiement par carte ?", a: "Aujourd'hui : virement IBAN sur la page client." },
+  {
+    q: "Venqor remplace mon site web ?",
+    a: "Non. Le module de demande s'intègre à votre site existant.",
+  },
+  {
+    q: "Mes clients doivent créer un compte ?",
+    a: "Non. Ils formulent leur demande directement depuis votre vitrine.",
+  },
+  {
+    q: "Uniquement les mariages ?",
+    a: "Non. Tout type d'événement sur-mesure (mariage, séminaire, privatisation…).",
+  },
+  {
+    q: "Puis-je paramétrer mes propres tarifs ?",
+    a: "Oui. Espaces, chambres, menus et options se configurent dans l'outil.",
+  },
+  {
+    q: "Combien de temps dure l'échange ?",
+    a: "Environ 15 minutes pour comprendre votre lieu et voir si Venqor vous convient.",
+  },
 ] as const

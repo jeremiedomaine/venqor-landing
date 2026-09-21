@@ -1,9 +1,9 @@
-import { Building2, Link2, ShieldCheck } from "lucide-react"
+import { Building2, Layers3, MessageSquare } from "lucide-react"
 
 const proofs = [
-  { icon: Building2, text: "Châteaux, domaines & lieux de réception" },
-  { icon: Link2, text: "Page client sans compte" },
-  { icon: ShieldCheck, text: "Vous confirmez les virements" },
+  { icon: Layers3, text: "Offres multi-services structurées" },
+  { icon: MessageSquare, text: "Demandes entrantes plus complètes" },
+  { icon: Building2, text: "Domaines, châteaux & lieux événementiels" },
 ]
 
 export function ReassuranceStrip() {
