@@ -1,22 +1,26 @@
 export const faqs = [
   {
-    q: "Venqor remplace mon site web ?",
-    a: "Non. Le module de demande s'intègre à votre site existant.",
+    q: "Combien de temps pour mettre Venqor en place ?",
+    a: "Le paramétrage des espaces, chambres, menus et tarifs se fait directement dans l'outil. Un échange suffit souvent pour démarrer sur votre configuration.",
   },
   {
-    q: "Mes clients doivent créer un compte ?",
-    a: "Non. Ils formulent leur demande directement depuis votre vitrine.",
+    q: "Le module s'intègre à mon site existant ?",
+    a: "Oui. Vos clients formulent leurs demandes depuis votre vitrine ; Venqor ne remplace pas votre site.",
   },
   {
-    q: "Uniquement les mariages ?",
-    a: "Non. Tout type d'événement sur-mesure (mariage, séminaire, privatisation…).",
+    q: "Mes clients doivent-ils créer un compte ?",
+    a: "Non. Ils construisent leur projet pas-à-pas sans inscription.",
   },
   {
-    q: "Puis-je paramétrer mes propres tarifs ?",
-    a: "Oui. Espaces, chambres, menus et options se configurent dans l'outil.",
+    q: "Pour quels types d'événements ?",
+    a: "Mariages, séminaires, privatisations et tout événement sur-mesure multi-services.",
   },
   {
-    q: "Combien de temps dure l'échange ?",
-    a: "Environ 15 minutes pour comprendre votre lieu et voir si Venqor vous convient.",
+    q: "Venqor remplace-t-il ma comptabilité ?",
+    a: "Non. L'outil structure offres et demandes ; vos outils de compta restent en place.",
+  },
+  {
+    q: "Comment se passe le premier échange ?",
+    a: "Environ 15 minutes pour parler de votre lieu et voir si Venqor correspond à vos besoins — sans engagement.",
   },
 ] as const

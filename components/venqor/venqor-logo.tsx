@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils"
 
 const sizeClasses = {
+  hero: "text-5xl md:text-6xl lg:text-7xl",
   navbar: "text-2xl",
   md: "text-xl",
   sm: "text-lg",
@@ -10,18 +11,15 @@ export type VenqorLogoSize = keyof typeof sizeClasses
 
 type VenqorLogoProps = {
   className?: string
-  /** Navbar : text-2xl (défaut) */
   size?: VenqorLogoSize
 }
 
-/**
- * Logo typographique MVB : Ven (slate-900) + qor. (primary), sans espace.
- */
+/** Logo typographique : Ven (slate) + qor. (primary) */
 export function VenqorLogo({ className, size = "navbar" }: VenqorLogoProps) {
   return (
     <span
       className={cn(
-        "inline-flex items-baseline font-black tracking-tight leading-none",
+        "inline-flex items-baseline font-display font-semibold tracking-[-0.03em] leading-none",
         sizeClasses[size],
         className,
       )}

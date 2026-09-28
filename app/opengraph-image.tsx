@@ -16,17 +16,17 @@ export default function OpenGraphImage() {
           flexDirection: "column",
           justifyContent: "center",
           padding: "72px 80px",
-          background: "linear-gradient(135deg, #F8FAFC 0%, #EEF2FF 55%, #F8FAFC 100%)",
-          fontFamily: "system-ui, sans-serif",
+          background: "linear-gradient(165deg, #EEF1F8 0%, #F4F6F9 50%, #FFFFFF 100%)",
+          fontFamily: "Georgia, serif",
         }}
       >
         <div
           style={{
             display: "flex",
             alignItems: "baseline",
-            fontSize: 88,
-            fontWeight: 900,
-            letterSpacing: "-0.04em",
+            fontSize: 84,
+            fontWeight: 600,
+            letterSpacing: "-0.03em",
             marginBottom: 28,
           }}
         >
@@ -35,20 +35,21 @@ export default function OpenGraphImage() {
         </div>
         <div
           style={{
-            fontSize: 36,
-            fontWeight: 600,
+            fontSize: 34,
+            fontWeight: 500,
             color: "#0F172A",
             lineHeight: 1.35,
-            maxWidth: 900,
+            maxWidth: 920,
           }}
         >
           {SITE_TAGLINE}
         </div>
         <div
           style={{
-            marginTop: 40,
-            fontSize: 22,
+            marginTop: 36,
+            fontSize: 20,
             color: "#64748B",
+            fontFamily: "system-ui, sans-serif",
           }}
         >
           Offres · Demandes · Réservation

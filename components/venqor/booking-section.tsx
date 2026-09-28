@@ -7,17 +7,13 @@ import { VenqorLogo } from "@/components/venqor/venqor-logo"
 
 export function BookingSection() {
   return (
-    <section id="booking" className="relative bg-paper-texture px-4 py-28">
-      <div className="absolute left-1/2 top-0 h-px w-[600px] -translate-x-1/2 bg-gradient-to-r from-transparent via-primary/25 to-transparent" />
-
-      <div className="pointer-events-none absolute bottom-0 left-1/2 h-[400px] w-[700px] -translate-x-1/2 rounded-full bg-primary/5 blur-[140px]" />
-
+    <section id="booking" className="relative bg-white px-4 py-24 md:py-28">
       <div className="relative mx-auto max-w-5xl">
-        <div className="mb-14 text-center">
-          <p className="mb-4 font-mono text-xs font-semibold uppercase tracking-[0.12em] text-primary">
+        <div className="mb-12 text-center">
+          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.16em] text-primary">
             Échange
           </p>
-          <h2 className="mx-auto mb-4 max-w-xl text-balance text-3xl font-semibold leading-[1.1] tracking-[-0.04em] text-slate-900 md:text-4xl">
+          <h2 className="mx-auto mb-4 max-w-xl text-balance font-display text-3xl font-medium tracking-[-0.02em] text-slate-900 md:text-4xl">
             Planifier un échange
           </h2>
           <p className="mx-auto max-w-md text-sm leading-relaxed text-slate-600">
@@ -26,17 +22,14 @@ export function BookingSection() {
           </p>
         </div>
 
-        <div className="rounded-2xl border border-slate-200/90 bg-white/75 shadow-2xl shadow-slate-900/10 backdrop-blur-sm">
+        <div className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-50/50">
           <div className="flex flex-col md:flex-row">
-            <div className="flex shrink-0 flex-col gap-5 border-b border-slate-200/80 bg-slate-50/70 p-7 md:w-72 md:border-b-0 md:border-r">
+            <div className="flex shrink-0 flex-col gap-5 border-b border-slate-200 p-7 md:w-72 md:border-b-0 md:border-r">
               <div>
-                <div className="mb-4 flex h-9 w-9 items-center justify-center rounded-xl border border-slate-200/90 bg-primary/5">
-                  <Video className="h-4 w-4 text-primary" />
-                </div>
-                <div className="mb-1">
+                <div className="mb-3">
                   <VenqorLogo size="sm" />
                 </div>
-                <h3 className="text-base font-semibold tracking-[-0.02em] text-slate-900">
+                <h3 className="text-base font-semibold text-slate-900">
                   Échange découverte
                 </h3>
               </div>
@@ -48,24 +41,22 @@ export function BookingSection() {
                 </div>
                 <div className="flex items-center gap-2.5">
                   <Video className="h-4 w-4 shrink-0 text-slate-400" />
-                  <span>Visioconférence (lien envoyé par e-mail)</span>
+                  <span>Visioconférence</span>
                 </div>
                 <div className="flex items-center gap-2.5">
                   <CalendarDays className="h-4 w-4 shrink-0 text-slate-400" />
-                  <span>Créneaux en direct · Europe/Paris</span>
+                  <span>Créneaux · Europe/Paris</span>
                 </div>
               </div>
 
-              <div className="mt-auto border-t border-slate-200/80 pt-4">
-                <p className="text-xs leading-relaxed text-slate-500">
-                  Un échange simple sur le fonctionnement de votre établissement
-                  — sans engagement.
-                </p>
-              </div>
+              <p className="mt-auto border-t border-slate-200 pt-4 text-xs leading-relaxed text-slate-500">
+                Un échange simple sur le fonctionnement de votre établissement —
+                sans engagement.
+              </p>
             </div>
 
-            <div className="min-w-0 flex-1 bg-slate-50/50 p-3 sm:p-4 md:p-5">
-              <div className="relative max-h-[min(90vh,960px)] min-h-[600px] w-full overflow-x-hidden overflow-y-auto overscroll-contain rounded-2xl border border-slate-200/90 bg-white/90 shadow-lg shadow-slate-900/5 [-webkit-overflow-scrolling:touch]">
+            <div className="min-w-0 flex-1 bg-white p-3 sm:p-4 md:p-5">
+              <div className="relative max-h-[min(90vh,960px)] min-h-[600px] w-full overflow-x-hidden overflow-y-auto overscroll-contain rounded-xl border border-slate-200 bg-white [-webkit-overflow-scrolling:touch]">
                 <VenqorCalEmbed className="w-full" />
               </div>
             </div>

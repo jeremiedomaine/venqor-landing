@@ -2,11 +2,11 @@ import { VenqorLogo } from "@/components/venqor/venqor-logo"
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-slate-200/80 bg-slate-50/80 px-4 py-12">
-      <div className="mx-auto flex max-w-5xl flex-col gap-8 md:flex-row md:items-start md:justify-between">
+    <footer className="border-t border-slate-200 bg-slate-50 px-4 py-14">
+      <div className="mx-auto flex max-w-5xl flex-col gap-10 md:flex-row md:items-start md:justify-between">
         <div>
           <VenqorLogo size="md" />
-          <p className="mt-3 max-w-xs text-sm text-slate-600">
+          <p className="mt-3 max-w-xs text-sm leading-relaxed text-slate-600">
             Simplifiez la réservation de votre domaine de réception.
           </p>
         </div>
@@ -21,7 +21,7 @@ export function SiteFooter() {
               </li>
               <li>
                 <a href="#parcours" className="hover:text-primary">
-                  Parcours
+                  Fonctionnement
                 </a>
               </li>
               <li>
@@ -32,7 +32,7 @@ export function SiteFooter() {
             </ul>
           </div>
           <div>
-            <p className="mb-3 font-medium text-slate-900">Accès</p>
+            <p className="mb-3 font-medium text-slate-900">Contact</p>
             <ul className="space-y-2 text-slate-600">
               <li>
                 <a href="#booking" className="hover:text-primary">
@@ -41,20 +41,10 @@ export function SiteFooter() {
               </li>
               <li>
                 <a
-                  href="https://acceuil.venqor.app/login"
+                  href="https://app.venqor.app/login"
                   className="hover:text-primary"
                 >
                   Connexion
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://app.venqor.app"
-                  className="hover:text-primary"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Application
                 </a>
               </li>
             </ul>
@@ -62,12 +52,12 @@ export function SiteFooter() {
           <div className="col-span-2 sm:col-span-1">
             <p className="mb-3 font-medium text-slate-900">Marché</p>
             <p className="text-slate-600">
-              France · Lieux de réception · Francophone
+              France · Domaines & lieux de réception
             </p>
           </div>
         </div>
       </div>
-      <div className="mx-auto mt-10 max-w-5xl border-t border-slate-200/80 pt-8 text-center text-xs text-slate-500">
+      <div className="mx-auto mt-12 max-w-5xl border-t border-slate-200 pt-8 text-center text-xs text-slate-500">
         © {new Date().getFullYear()} Venqor. Tous droits réservés.
       </div>
     </footer>

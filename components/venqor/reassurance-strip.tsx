@@ -1,26 +1,23 @@
-import { Building2, Layers3, MessageSquare } from "lucide-react"
-
 const proofs = [
-  { icon: Layers3, text: "Offres multi-services structurées" },
-  { icon: MessageSquare, text: "Demandes entrantes plus complètes" },
-  { icon: Building2, text: "Domaines, châteaux & lieux événementiels" },
+  "Offres multi-services",
+  "Demandes structurées",
+  "Réservation maîtrisée",
 ]
 
 export function ReassuranceStrip() {
   return (
-    <section className="border-y border-slate-200/80 bg-primary/[0.04] px-4 py-10">
-      <div className="mx-auto flex max-w-5xl flex-col gap-6 md:flex-row md:items-center md:justify-between">
-        {proofs.map(({ icon: Icon, text }) => (
-          <div
-            key={text}
-            className="flex items-center gap-3 text-sm font-medium text-slate-700"
-          >
-            <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white shadow-sm">
-              <Icon className="h-4 w-4 text-primary" />
-            </div>
-            {text}
-          </div>
-        ))}
+    <section className="border-y border-slate-200/80 bg-white/60 px-4 py-8">
+      <div className="mx-auto flex max-w-4xl flex-col items-center justify-center gap-4 text-center sm:flex-row sm:gap-10">
+        <p className="text-xs font-semibold uppercase tracking-[0.14em] text-slate-400">
+          Conçu pour
+        </p>
+        <ul className="flex flex-wrap items-center justify-center gap-x-8 gap-y-2">
+          {proofs.map(text => (
+            <li key={text} className="text-sm font-medium text-slate-700">
+              {text}
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   )

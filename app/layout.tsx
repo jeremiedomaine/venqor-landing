@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
+import { Figtree, Fraunces } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { StructuredData } from "@/components/venqor/structured-data"
 import {
@@ -10,9 +10,15 @@ import {
 } from "@/lib/site"
 import "./globals.css"
 
-const inter = Inter({
+const figtree = Figtree({
   subsets: ["latin"],
-  variable: "--font-inter-sans",
+  variable: "--font-figtree",
+  display: "swap",
+})
+
+const fraunces = Fraunces({
+  subsets: ["latin"],
+  variable: "--font-fraunces",
   display: "swap",
 })
 
@@ -71,7 +77,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="fr" className={inter.variable}>
+    <html lang="fr" className={`${figtree.variable} ${fraunces.variable}`}>
       <body className="font-sans antialiased">
         <StructuredData />
         {children}
