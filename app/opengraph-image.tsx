@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og"
 import { SITE_NAME, SITE_TAGLINE } from "@/lib/site"
 
-export const alt = `${SITE_NAME} — Réservation pour domaines de réception`
+export const alt = `${SITE_NAME} — Infrastructure digitale pour domaines d'exception`
 export const size = { width: 1200, height: 630 }
 export const contentType = "image/png"
 
@@ -16,7 +16,7 @@ export default function OpenGraphImage() {
           flexDirection: "column",
           justifyContent: "center",
           padding: "72px 80px",
-          background: "linear-gradient(165deg, #EEF1F8 0%, #F4F6F9 50%, #FFFFFF 100%)",
+          background: "linear-gradient(165deg, #0c0c0e 0%, #16161a 100%)",
           fontFamily: "Georgia, serif",
         }}
       >
@@ -30,16 +30,17 @@ export default function OpenGraphImage() {
             marginBottom: 28,
           }}
         >
-          <span style={{ color: "#0F172A" }}>Ven</span>
-          <span style={{ color: "#4F46E5" }}>qor.</span>
+          <span style={{ color: "#FFFFFF" }}>Ven</span>
+          <span style={{ color: "#A5B4FC" }}>qor.</span>
         </div>
         <div
           style={{
-            fontSize: 34,
+            fontSize: 32,
             fontWeight: 500,
-            color: "#0F172A",
+            color: "#FFFFFF",
             lineHeight: 1.35,
             maxWidth: 920,
+            opacity: 0.92,
           }}
         >
           {SITE_TAGLINE}
@@ -47,12 +48,12 @@ export default function OpenGraphImage() {
         <div
           style={{
             marginTop: 36,
-            fontSize: 20,
-            color: "#64748B",
+            fontSize: 18,
+            color: "#94A3B8",
             fontFamily: "system-ui, sans-serif",
           }}
         >
-          Offres · Demandes · Réservation
+          Setup clés en main · Friction zéro · SwaS premium
         </div>
       </div>
     ),

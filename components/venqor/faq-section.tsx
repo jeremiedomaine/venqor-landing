@@ -20,18 +20,18 @@ export function FAQSection() {
       <Accordion
         type="single"
         collapsible
-        className="mx-auto max-w-2xl border-y border-slate-200"
+        className="mx-auto max-w-2xl border-y border-border"
       >
         {faqs.map((faq, i) => (
           <AccordionItem
             key={faq.q}
             value={`item-${i}`}
-            className="border-slate-200"
+            className="border-border"
           >
-            <AccordionTrigger className="text-left text-sm font-medium text-slate-900 hover:no-underline md:text-[0.95rem]">
+            <AccordionTrigger className="text-left text-sm font-medium text-ink hover:no-underline md:text-[0.95rem]">
               {faq.q}
             </AccordionTrigger>
-            <AccordionContent className="text-sm leading-relaxed text-slate-600">
+            <AccordionContent className="text-sm leading-relaxed text-ink-soft">
               {faq.a}
             </AccordionContent>
           </AccordionItem>

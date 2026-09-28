@@ -1,25 +1,26 @@
 import { VenqorLogo } from "@/components/venqor/venqor-logo"
+import { CTA_PRIMARY } from "@/lib/site"
 
 const LOGIN_URL = "https://app.venqor.app/login"
 
 export function TopBar() {
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 px-5 py-3.5 md:px-8">
-      <div className="absolute inset-0 border-b border-slate-200/70 bg-white/70 backdrop-blur-md" />
+    <header className="fixed top-0 left-0 right-0 z-50 px-5 py-4 md:px-10">
+      <div className="absolute inset-0 border-b border-white/10 bg-[#0c0c0e]/70 backdrop-blur-xl" />
       <div className="relative mx-auto flex max-w-6xl items-center justify-between">
         <a href="#" aria-label="Venqor — accueil">
-          <VenqorLogo size="navbar" />
+          <VenqorLogo size="navbar" inverted />
         </a>
-        <div className="flex items-center gap-2 sm:gap-3">
+        <div className="flex items-center gap-3">
           <a
             href="#booking"
-            className="hidden rounded-lg bg-primary px-3.5 py-1.5 text-sm font-medium text-primary-foreground shadow-sm transition-colors hover:bg-primary/90 sm:inline-flex"
+            className="hidden rounded-full bg-white px-4 py-2 text-sm font-medium text-ink transition-opacity hover:opacity-90 sm:inline-flex"
           >
-            Planifier un échange
+            {CTA_PRIMARY}
           </a>
           <a
             href={LOGIN_URL}
-            className="rounded-lg border border-slate-200 bg-white/80 px-3.5 py-1.5 text-sm font-medium text-slate-900 transition-colors hover:border-primary/40"
+            className="rounded-full border border-white/20 px-4 py-2 text-sm font-medium text-white/90 transition-colors hover:border-white/40 hover:text-white"
           >
             Se connecter
           </a>

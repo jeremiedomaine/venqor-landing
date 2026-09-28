@@ -48,9 +48,9 @@ export function StructuredData() {
     description: SITE_DESCRIPTION,
     offers: {
       "@type": "Offer",
-      price: "0",
+      price: "2000",
       priceCurrency: "EUR",
-      description: "Échange de découverte sur demande",
+      description: "Setup complet clés en main — modélisation, intégration, formation",
     },
   }
 

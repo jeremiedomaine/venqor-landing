@@ -12,10 +12,15 @@ export type VenqorLogoSize = keyof typeof sizeClasses
 type VenqorLogoProps = {
   className?: string
   size?: VenqorLogoSize
+  /** Version claire pour fonds sombres */
+  inverted?: boolean
 }
 
-/** Logo typographique : Ven (slate) + qor. (primary) */
-export function VenqorLogo({ className, size = "navbar" }: VenqorLogoProps) {
+export function VenqorLogo({
+  className,
+  size = "navbar",
+  inverted = false,
+}: VenqorLogoProps) {
   return (
     <span
       className={cn(
@@ -25,8 +30,8 @@ export function VenqorLogo({ className, size = "navbar" }: VenqorLogoProps) {
       )}
       aria-label="Venqor"
     >
-      <span className="text-slate-900">Ven</span>
-      <span className="text-primary">qor.</span>
+      <span className={inverted ? "text-white" : "text-ink"}>Ven</span>
+      <span className={inverted ? "text-indigo-300" : "text-primary"}>qor.</span>
     </span>
   )
 }

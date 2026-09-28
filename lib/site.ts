@@ -4,7 +4,10 @@ export const SITE_URL =
 export const SITE_NAME = "Venqor"
 
 export const SITE_DESCRIPTION =
-  "Un outil pour structurer vos offres complexes (espaces, hébergements, restauration) et fluidifier les échanges avec vos clients."
+  "Infrastructure digitale clés en main pour domaines de réception d'exception. Modélisation, encaissement invités et conciergerie IA — setup Done-for-you."
 
 export const SITE_TAGLINE =
-  "Simplifiez la réservation de votre domaine de réception."
+  "L'infrastructure digitale des domaines de réception d'exception."
+
+export const CTA_PRIMARY = "Demander une étude de modélisation"
+export const CTA_SECONDARY = "Planifier un audit de mon domaine"
