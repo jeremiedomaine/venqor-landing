@@ -1,24 +1,21 @@
-import { CTA_PRIMARY } from "@/lib/site"
+import { CTA_SECONDARY } from "@/lib/site"
+import { OrnamentDivider } from "@/components/venqor/ornaments"
 
 export function FinalCTASection() {
   return (
-    <section className="relative bg-hero-lux px-4 py-28 text-center text-white">
-      <div className="relative mx-auto max-w-2xl">
-        <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-indigo-300">
-          Prochaine étape
-        </p>
-        <h2 className="font-display text-3xl font-medium tracking-[-0.02em] md:text-4xl">
-          Prêt à supprimer la friction de votre domaine&nbsp;?
+    <section className="bg-section-dark px-6 py-16 md:py-24">
+      <div className="relative mx-auto max-w-2xl text-center">
+        <p className="eyebrow mb-5 !text-indigo-300">Prochaine étape</p>
+        <h2 className="font-sans text-[32px] font-medium leading-[1.15] tracking-[-0.01em] text-white md:text-[42px]">
+          Offrez à vos mariés une expérience digne de votre domaine.
         </h2>
-        <p className="mx-auto mt-5 max-w-md text-sm leading-relaxed text-white/60 md:text-[0.95rem]">
-          Demandez une étude de modélisation. Nous auditons votre organisation
-          hébergement / invités et vous présentons le déploiement clés en main.
+        <OrnamentDivider className="my-10" />
+        <p className="mx-auto max-w-md font-normal leading-[1.6] text-white/70 md:text-lg">
+          Demandez une modélisation. Nous étudions votre architecture
+          d&apos;hébergement et vous présentons l&apos;application clés en main.
         </p>
-        <a
-          href="#booking"
-          className="mt-10 inline-flex rounded-full bg-white px-7 py-3.5 text-sm font-semibold text-ink transition-opacity hover:opacity-90"
-        >
-          {CTA_PRIMARY}
+        <a href="#booking" className="btn-on-dark mt-10">
+          {CTA_SECONDARY}
         </a>
       </div>
     </section>

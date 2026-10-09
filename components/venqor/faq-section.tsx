@@ -15,28 +15,26 @@ export function FAQSection() {
       id="faq"
       eyebrow="FAQ"
       title="Questions fréquentes"
-      className="bg-white"
+      className="bg-section-muted"
     >
-      <Accordion
-        type="single"
-        collapsible
-        className="mx-auto max-w-2xl border-y border-border"
-      >
-        {faqs.map((faq, i) => (
-          <AccordionItem
-            key={faq.q}
-            value={`item-${i}`}
-            className="border-border"
-          >
-            <AccordionTrigger className="text-left text-sm font-medium text-ink hover:no-underline md:text-[0.95rem]">
-              {faq.q}
-            </AccordionTrigger>
-            <AccordionContent className="text-sm leading-relaxed text-ink-soft">
-              {faq.a}
-            </AccordionContent>
-          </AccordionItem>
-        ))}
-      </Accordion>
+      <div className="mx-auto max-w-2xl border border-slate-200 bg-white">
+        <Accordion type="single" collapsible>
+          {faqs.map((faq, i) => (
+            <AccordionItem
+              key={faq.q}
+              value={`item-${i}`}
+              className="border-slate-200 px-6"
+            >
+              <AccordionTrigger className="py-5 text-left text-sm font-medium text-slate-900 hover:no-underline md:text-[15px]">
+                {faq.q}
+              </AccordionTrigger>
+              <AccordionContent className="pb-5 text-sm font-normal leading-relaxed text-slate-600">
+                {faq.a}
+              </AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
+      </div>
     </SectionShell>
   )
 }

@@ -1,42 +1,45 @@
-import { CTA_PRIMARY } from "@/lib/site"
+import { CTA_SECONDARY } from "@/lib/site"
 import { SectionShell } from "@/components/venqor/section-shell"
+import { OrnamentDivider } from "@/components/venqor/ornaments"
 
 export function PricingSection() {
   return (
     <SectionShell
       id="modele"
       eyebrow="Modèle économique"
-      title="Un setup premium. Une clarté totale."
-      description="Nous assumons un ticket d'entrée à la hauteur de l'exécution : modélisation, intégration financière et formation — livrés clés en main."
-      className="bg-paper-lux"
+      title="Setup complet clés en main."
+      description="Modélisation de l'architecture, intégration de la marque et formation du staff — livrés sans que vous ayez à paramétrer quoi que ce soit."
+      className="bg-section-alt"
     >
-      <div className="mx-auto max-w-xl text-center">
-        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">
-          Setup complet clés en main
+      <div className="mx-auto max-w-lg border border-slate-200 bg-white px-10 py-14 text-center">
+        <p className="eyebrow">Setup complet clés en main</p>
+        <p className="mt-6 text-3xl font-semibold tracking-tight text-primary md:text-4xl">
+          Sur devis
         </p>
-        <p className="mt-4 font-display text-6xl font-medium tracking-tight text-ink md:text-7xl">
-          2&nbsp;000&nbsp;€
-        </p>
-        <p className="mt-3 text-sm text-ink-soft">
-          Modélisation · Intégration financière · Formation de l&apos;équipe
+        <p className="mt-3 text-lg font-medium text-slate-900">Clés en main</p>
+        <p className="mt-4 text-sm font-normal text-slate-600">
+          Modélisation · Intégration de la marque · Formation du staff — tarif
+          présenté lors de la modélisation, adapté à votre domaine.
         </p>
 
-        <div className="mx-auto mt-10 h-px w-24 bg-border" />
+        <OrnamentDivider className="mt-10" />
 
-        <p className="mt-10 text-sm leading-relaxed text-ink-soft">
+        <p className="mt-10 text-sm font-normal leading-relaxed text-slate-600">
           Puis une{" "}
-          <span className="font-medium text-ink">
-            licence de maintenance mensuelle
+          <span className="font-medium text-slate-900">
+            licence mensuelle de maintenance
           </span>{" "}
-          pour l&apos;hébergement sécurisé, le support et les mises à jour —
-          détaillée lors de l&apos;étude de modélisation.
+          — hébergement sécurisé et SAV inclus. Le détail vous est présenté lors
+          de la modélisation.
         </p>
 
-        <a
-          href="#booking"
-          className="mt-10 inline-flex rounded-full bg-ink px-7 py-3.5 text-sm font-semibold text-white transition-opacity hover:opacity-90"
-        >
-          {CTA_PRIMARY}
+        <div className="mt-4 inline-flex items-center gap-2 rounded-md border border-indigo-200 bg-indigo-50 px-3 py-1.5 text-[11px] font-medium uppercase tracking-[0.08em] text-primary">
+          <span className="h-1.5 w-1.5 rounded-full bg-primary" />
+          Premium · Done-for-you
+        </div>
+
+        <a href="#booking" className="btn-primary mt-10">
+          {CTA_SECONDARY}
         </a>
       </div>
     </SectionShell>

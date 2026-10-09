@@ -4,10 +4,11 @@ export const SITE_URL =
 export const SITE_NAME = "Venqor"
 
 export const SITE_DESCRIPTION =
-  "Infrastructure digitale clés en main pour domaines de réception d'exception. Modélisation, encaissement invités et conciergerie IA — setup Done-for-you."
+  "Offrez à chaque mariage une application dédiée — chambres, allergies, RSVP. Setup Done-for-you sur devis pour domaines de réception d'exception."
 
-export const SITE_TAGLINE =
-  "L'infrastructure digitale des domaines de réception d'exception."
+export const SITE_TAGLINE = "Offrez à chaque mariage son application dédiée."
 
-export const CTA_PRIMARY = "Demander une étude de modélisation"
-export const CTA_SECONDARY = "Planifier un audit de mon domaine"
+/** CTA primaire : montrer le produit */
+export const CTA_PRIMARY = "Voir un exemple d'application"
+/** CTA conversion : modélisation */
+export const CTA_SECONDARY = "Demander une modélisation"

@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { Figtree, Fraunces } from "next/font/google"
+import { Inter } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { StructuredData } from "@/components/venqor/structured-data"
 import {
@@ -10,33 +10,28 @@ import {
 } from "@/lib/site"
 import "./globals.css"
 
-const figtree = Figtree({
+const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-figtree",
+  variable: "--font-inter",
   display: "swap",
-})
-
-const fraunces = Fraunces({
-  subsets: ["latin"],
-  variable: "--font-fraunces",
-  display: "swap",
+  weight: ["400", "500", "600", "700", "800", "900"],
 })
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${SITE_NAME} — Infrastructure digitale pour domaines d'exception`,
+    default: `${SITE_NAME} — Application mariage pour domaines d'exception`,
     template: `%s | ${SITE_NAME}`,
   },
   description: SITE_DESCRIPTION,
   keywords: [
     "Venqor",
-    "domaine de mariage",
-    "château réception",
+    "application mariage",
+    "domaine de réception",
+    "répartition chambres",
+    "RSVP mariage",
     "hébergement invités",
-    "encaissement chambres",
-    "conciergerie IA",
-    "SwaS événementiel",
+    "setup clés en main",
   ],
   authors: [{ name: SITE_NAME }],
   creator: SITE_NAME,
@@ -53,12 +48,12 @@ export const metadata: Metadata = {
     locale: "fr_FR",
     url: SITE_URL,
     siteName: SITE_NAME,
-    title: `${SITE_NAME} — Infrastructure digitale pour domaines d'exception`,
+    title: `${SITE_NAME} — Application mariage pour domaines d'exception`,
     description: SITE_TAGLINE,
   },
   twitter: {
     card: "summary_large_image",
-    title: `${SITE_NAME} — Domaines d'exception`,
+    title: `${SITE_NAME} — Application mariage dédiée`,
     description: SITE_DESCRIPTION,
   },
   icons: {
@@ -77,7 +72,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="fr" className={`${figtree.variable} ${fraunces.variable}`}>
+    <html lang="fr" className={inter.variable}>
       <body className="font-sans antialiased">
         <StructuredData />
         {children}

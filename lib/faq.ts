@@ -1,26 +1,26 @@
 export const faqs = [
   {
-    q: "Qu'est-ce qu'inclut le setup à 2 000 € ?",
-    a: "La modélisation de votre domaine, l'intégration financière, la reprise de votre charte graphique et la formation de votre équipe. Vous validez — nous exécutons.",
+    q: "Qu'est-ce que reçoivent les mariés ?",
+    a: "Une application web élégante aux couleurs de votre domaine : répartition des chambres, RSVP, allergies et informations pour leurs invités.",
   },
   {
-    q: "Dois-je configurer le logiciel moi-même ?",
-    a: "Non. C'est le principe du SwaS : nos équipes récupèrent vos plans, tarifs et identité visuelle pour créer l'application sur-mesure. Vous n'avez qu'à valider.",
+    q: "Qu'est-ce qu'inclut le setup clés en main ?",
+    a: "La modélisation de votre architecture d'hébergement, l'intégration de votre marque et la formation de votre équipe. Nous construisons l'application de A à Z. Le devis vous est présenté lors de la modélisation.",
   },
   {
-    q: "Comment fonctionne l'encaissement des invités ?",
-    a: "Vos invités réservent et paient leur chambre en quelques clics (dont Apple Pay) via une interface à votre image. Les fonds arrivent sur votre compte — sans avance de votre part.",
+    q: "Dois-je paramétrer l'outil moi-même ?",
+    a: "Non. Nos équipes récupèrent vos plans, menus, tarifs et hébergements. Vous validez — nous exécutons.",
   },
   {
-    q: "La conciergerie IA remplace-t-elle mon équipe ?",
-    a: "Non. Elle répond 24h/24 aux questions logistiques (codes, lits bébés, règlement du domaine), pour supprimer la majorité des appels inutiles. Votre équipe reste sur l'essentiel.",
+    q: "Qui gère le support si un invité a une question ?",
+    a: "Notre équipe. Vos équipes ne sont jamais sollicitées pour de l'assistance technique sur l'application.",
   },
   {
-    q: "Pour quels domaines Venqor est-il conçu ?",
-    a: "Domaines et châteaux haut de gamme qui accueillent des réceptions d'envergure — typiquement 40 à 80 couchages et des prestations à plus de 20 000 €.",
+    q: "Que recevez-vous avant l'événement ?",
+    a: "Une fiche de route claire et définitive : répartition des couchages, présences confirmées et allergies centralisées.",
   },
   {
     q: "Comment démarrer ?",
-    a: "Demandez une étude de modélisation. Nous auditons votre domaine et vous présentons la mise en place — sans engagement sur le setup.",
+    a: "Demandez une modélisation. Nous étudions votre domaine et vous présentons le déploiement clés en main — sans engagement sur le setup.",
   },
 ] as const

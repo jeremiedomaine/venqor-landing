@@ -48,9 +48,9 @@ export function StructuredData() {
     description: SITE_DESCRIPTION,
     offers: {
       "@type": "Offer",
-      price: "2000",
-      priceCurrency: "EUR",
-      description: "Setup complet clés en main — modélisation, intégration, formation",
+      description:
+        "Setup complet clés en main sur devis — modélisation, intégration, formation",
+      availability: "https://schema.org/InStock",
     },
   }
 

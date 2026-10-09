@@ -22,28 +22,26 @@ export function SectionShell({
   dark = false,
 }: SectionShellProps) {
   return (
-    <section id={id} className={cn("relative px-4 py-24 md:py-32", className)}>
+    <section
+      id={id}
+      className={cn("relative px-6 py-16 md:px-8 md:py-24", className)}
+    >
       <div className="relative mx-auto max-w-5xl">
         <div
           className={cn(
-            "mb-14 md:mb-16",
-            centered && "mx-auto max-w-3xl text-center",
+            "mb-12 md:mb-16",
+            centered && "mx-auto max-w-2xl text-center",
           )}
         >
           {eyebrow && (
-            <p
-              className={cn(
-                "mb-4 text-xs font-semibold uppercase tracking-[0.2em]",
-                dark ? "text-indigo-300" : "text-primary",
-              )}
-            >
+            <p className={cn("eyebrow mb-5", dark && "!text-indigo-300")}>
               {eyebrow}
             </p>
           )}
           <h2
             className={cn(
-              "text-balance font-display text-3xl font-medium tracking-[-0.02em] md:text-4xl lg:text-[2.75rem]",
-              dark ? "text-white" : "text-ink",
+              "text-balance text-3xl font-semibold tracking-tight md:text-4xl",
+              dark ? "text-white" : "text-slate-900",
             )}
           >
             {title}
@@ -51,8 +49,8 @@ export function SectionShell({
           {description && (
             <p
               className={cn(
-                "mt-5 text-[0.95rem] leading-relaxed md:text-base",
-                dark ? "text-white/60" : "text-ink-soft",
+                "mt-5 text-base leading-relaxed",
+                dark ? "text-slate-300" : "text-slate-500",
               )}
             >
               {description}

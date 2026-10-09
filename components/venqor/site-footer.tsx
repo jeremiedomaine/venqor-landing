@@ -1,70 +1,70 @@
 import { VenqorLogo } from "@/components/venqor/venqor-logo"
-import { CTA_PRIMARY } from "@/lib/site"
+import { CTA_PRIMARY, CTA_SECONDARY } from "@/lib/site"
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-border bg-white px-4 py-14">
-      <div className="mx-auto flex max-w-5xl flex-col gap-10 md:flex-row md:items-start md:justify-between">
+    <footer className="border-t border-white/10 bg-slate-900 px-6 py-16 md:py-20">
+      <div className="mx-auto flex max-w-5xl flex-col gap-14 md:flex-row md:items-start md:justify-between">
         <div>
-          <VenqorLogo size="md" />
-          <p className="mt-3 max-w-xs text-sm leading-relaxed text-ink-soft">
-            L&apos;infrastructure digitale des domaines de réception
-            d&apos;exception.
-          </p>
+          <VenqorLogo size="md" inverted />
         </div>
-        <div className="grid grid-cols-2 gap-8 text-sm sm:grid-cols-3">
+        <div className="grid grid-cols-2 gap-10 text-sm sm:grid-cols-3">
           <div>
-            <p className="mb-3 font-medium text-ink">Produit</p>
-            <ul className="space-y-2 text-ink-soft">
+            <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.14em] text-indigo-300">
+              Produit
+            </p>
+            <ul className="space-y-3 text-white/70">
               <li>
-                <a href="#swas" className="hover:text-primary">
+                <a href="#exemple" className="hover:text-white">
+                  Exemple
+                </a>
+              </li>
+              <li>
+                <a href="#organisation" className="hover:text-white">
+                  Organisation
+                </a>
+              </li>
+              <li>
+                <a href="#swas" className="hover:text-white">
                   Done-for-you
                 </a>
               </li>
               <li>
-                <a href="#piliers" className="hover:text-primary">
-                  Piliers
-                </a>
-              </li>
-              <li>
-                <a href="#modele" className="hover:text-primary">
-                  Modèle
-                </a>
-              </li>
-              <li>
-                <a href="#faq" className="hover:text-primary">
-                  FAQ
+                <a href="#modele" className="hover:text-white">
+                  Setup
                 </a>
               </li>
             </ul>
           </div>
           <div>
-            <p className="mb-3 font-medium text-ink">Contact</p>
-            <ul className="space-y-2 text-ink-soft">
+            <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.14em] text-indigo-300">
+              Contact
+            </p>
+            <ul className="space-y-3 text-white/70">
               <li>
-                <a href="#booking" className="hover:text-primary">
+                <a href="#exemple" className="hover:text-white">
                   {CTA_PRIMARY}
                 </a>
               </li>
               <li>
-                <a
-                  href="https://app.venqor.app/login"
-                  className="hover:text-primary"
-                >
-                  Connexion
+                <a href="#booking" className="hover:text-white">
+                  {CTA_SECONDARY}
                 </a>
               </li>
             </ul>
           </div>
           <div className="col-span-2 sm:col-span-1">
-            <p className="mb-3 font-medium text-ink">Positionnement</p>
-            <p className="text-ink-soft">
-              SwaS premium · Domaines d&apos;exception · France
+            <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.14em] text-indigo-300">
+              Venqor
+            </p>
+            <p className="text-white/70">
+              Paris, France · Infrastructure digitale pour domaines
+              d&apos;exception
             </p>
           </div>
         </div>
       </div>
-      <div className="mx-auto mt-12 max-w-5xl border-t border-border pt-8 text-center text-xs text-muted-foreground">
+      <div className="mx-auto mt-14 max-w-5xl border-t border-white/10 pt-8 text-center text-xs text-white/45">
         © {new Date().getFullYear()} Venqor. Tous droits réservés.
       </div>
     </footer>

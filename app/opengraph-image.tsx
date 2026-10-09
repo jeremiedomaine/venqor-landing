@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og"
 import { SITE_NAME, SITE_TAGLINE } from "@/lib/site"
 
-export const alt = `${SITE_NAME} — Infrastructure digitale pour domaines d'exception`
+export const alt = `${SITE_NAME} — Application mariage pour domaines d'exception`
 export const size = { width: 1200, height: 630 }
 export const contentType = "image/png"
 
@@ -15,45 +15,52 @@ export default function OpenGraphImage() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
-          padding: "72px 80px",
-          background: "linear-gradient(165deg, #0c0c0e 0%, #16161a 100%)",
-          fontFamily: "Georgia, serif",
+          padding: "80px 88px",
+          background: "#F8FAFC",
+          fontFamily: "Inter, system-ui, sans-serif",
         }}
       >
         <div
           style={{
-            display: "flex",
-            alignItems: "baseline",
-            fontSize: 84,
-            fontWeight: 600,
-            letterSpacing: "-0.03em",
-            marginBottom: 28,
+            fontSize: 64,
+            fontWeight: 900,
+            letterSpacing: "-0.02em",
+            color: "#0F172A",
+            marginBottom: 24,
           }}
         >
-          <span style={{ color: "#FFFFFF" }}>Ven</span>
-          <span style={{ color: "#A5B4FC" }}>qor.</span>
+          Venqor
         </div>
         <div
           style={{
+            width: 48,
+            height: 4,
+            borderRadius: 2,
+            background: "#4F46E5",
+            marginBottom: 32,
+          }}
+        />
+        <div
+          style={{
             fontSize: 32,
-            fontWeight: 500,
-            color: "#FFFFFF",
-            lineHeight: 1.35,
-            maxWidth: 920,
-            opacity: 0.92,
+            fontWeight: 600,
+            color: "#0F172A",
+            lineHeight: 1.25,
+            maxWidth: 900,
           }}
         >
           {SITE_TAGLINE}
         </div>
         <div
           style={{
-            marginTop: 36,
+            marginTop: 40,
             fontSize: 18,
-            color: "#94A3B8",
-            fontFamily: "system-ui, sans-serif",
+            color: "#64748B",
+            maxWidth: 720,
+            lineHeight: 1.5,
           }}
         >
-          Setup clés en main · Friction zéro · SwaS premium
+          Application mariage clés en main pour domaines d&apos;exception
         </div>
       </div>
     ),
