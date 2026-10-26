@@ -76,7 +76,7 @@ export default function RootLayout({
       <body className="font-sans antialiased">
         <StructuredData />
         {children}
-        {process.env.NODE_ENV === "production" && <Analytics />}
+        <Analytics />
       </body>
     </html>
   )
